@@ -1,0 +1,33 @@
+{
+  "name": "mongodb-spreadsheet-data-storage-and-serving",
+  "version": "1.0.0",
+  "description": "A script that extracts data from a spreadsheet and saves it to a database, then serves the saved data as a REST API",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "www.github.com/paradoxfly/node-mongodb-spreadsheet-data-storage-and-serving"
+  },
+  "keywords": [
+    "mongodb",
+    "mongoose",
+    "rest",
+    "api",
+    "javascript",
+    "spreadsheet"
+  ],
+  "author": "Timothy Ogwulumba",
+  "license": "ISC"
+}
