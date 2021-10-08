@@ -4,7 +4,10 @@
   "description": "A script that extracts data from a spreadsheet and saves it to a database, then serves the saved data as a REST API",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^6.0.9",
+    "node": "^16.10.0",
+    "validator": "^13.6.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
@@ -14,7 +17,8 @@
     "eslint-plugin-promise": "^5.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
