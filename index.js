@@ -1,4 +1,4 @@
-const Database = require('./src/database')
+require('./src/database')
 const express = require('express')
 const app = express()
 const port = 3000
