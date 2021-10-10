@@ -4,6 +4,7 @@
   "description": "A script that extracts data from a spreadsheet and saves it to a database, then serves the saved data as a REST API",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^6.0.9",
     "node": "^16.10.0",

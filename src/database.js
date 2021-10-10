@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
-
-// const server = '127.0.0.1:27017'
-// const database = 'myDatabase'
+require('dotenv').config()
 
 class Database {
   constructor () {
@@ -9,7 +7,7 @@ class Database {
   }
 
   _connect () {
-    const uri = 'mongodb+srv://paradoxfly:teacher080@cluster0.z5us6.mongodb.net/mongoose?retryWrites=true&w=majority'
+    const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.z5us6.mongodb.net/mongoose?retryWrites=true&w=majority`
     mongoose.connect(uri)
       .then(() => {
         console.log('Database connection successful')
