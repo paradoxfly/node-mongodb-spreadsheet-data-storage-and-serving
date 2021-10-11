@@ -6,9 +6,11 @@
 async function getSpreadsheet (path) {
   const result = {}
   const xlsxFile = require('read-excel-file/node')
-  await xlsxFile(path, { sheet: 'IPHONES' }).then(rows => {
-    Object.assign(result, rows)
-  })
+  await xlsxFile(path, { sheet: 'IPHONES' })
+    .then(rows => {
+      Object.assign(result, rows)
+    })
+    .catch(err => console.log(err))
   return result
 }
 
@@ -83,15 +85,13 @@ function getPhone (i, j, n, spreadsheet) {
  */
 async function getProcessedSpreadsheet (path) {
   const object = { BuyRequests: {}, SellRequests: {} }
-  await getSpreadsheet(path).then(spreadsheet => {
-    object.BuyRequests = getTable(4, 1, spreadsheet)
-    object.SellRequests = getTable(4, 12, spreadsheet)
-  })
+  await getSpreadsheet(path)
+    .then(spreadsheet => {
+      object.BuyRequests = getTable(4, 1, spreadsheet)
+      object.SellRequests = getTable(4, 12, spreadsheet)
+    })
+    .catch(err => console.log(err))
   return object
 }
-
-// getProcessedSpreadsheet('./files/data.xlsx').then(data => {
-//   console.log(data.BuyRequests)
-// })
 
 module.exports = getProcessedSpreadsheet

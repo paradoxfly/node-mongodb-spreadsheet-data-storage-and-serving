@@ -8,6 +8,7 @@
     "express": "^4.17.1",
     "mongoose": "^6.0.9",
     "node": "^16.10.0",
+    "query": "^0.2.0",
     "read-excel-file": "^5.2.13",
     "validator": "^13.6.0"
   },

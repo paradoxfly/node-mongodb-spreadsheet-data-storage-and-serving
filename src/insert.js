@@ -1,10 +1,9 @@
-require('./database')
 const getProcessedSpreadsheet = require('../utils/spreadsheet')
 const tableSchema = require('./tableSchema')
 const mongoose = require('mongoose')
 
 /**
- * @description This function inserts the two tables into the mongo db database
+ * @description This function extracts the two tables from the spreadsheet, parses them into JSON format and inserts them into the mongo db database
  * @param {*} String representing relative path of the spreadsheet file
  * @returns null
  */
@@ -30,5 +29,4 @@ async function insertTables (path) {
   })
 }
 
-insertTables('./files/data.xlsx')
-module.exports = { insertTables }
+module.exports = insertTables
