@@ -3,7 +3,7 @@ const insertTables = require('./src/insert')
 const fetchTable = require('./src/fetch')
 const express = require('express')
 const app = express()
-const port = 3000
+const port = normalizePort(process.env.PORT || '3000')
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -39,3 +39,18 @@ app.get('/fetch-table', (req, res) => {
 app.listen(port, () => {
   console.log(`Listening at port:${port}`)
 })
+
+/**
+ * @description Normalize a port into a number, string or false.
+ * @param {*} Port
+ */
+function normalizePort (val) {
+  const port = parseInt(val, 10)
+  if (isNaN(port)) {
+    return val
+  }
+  if (port >= 0) {
+    return port
+  }
+  return false
+}
