@@ -91,7 +91,7 @@ async function getProcessedSpreadsheet (path) {
 }
 
 // getProcessedSpreadsheet('./files/data.xlsx').then(data => {
-//   console.log(data)
+//   console.log(data.BuyRequests)
 // })
 
 module.exports = getProcessedSpreadsheet
