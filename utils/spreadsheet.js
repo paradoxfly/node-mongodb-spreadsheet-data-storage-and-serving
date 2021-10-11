@@ -9,7 +9,6 @@ async function getSpreadsheet (path) {
   await xlsxFile(path, { sheet: 'IPHONES' }).then(rows => {
     Object.assign(result, rows)
   })
-  console.log(result[4][1])
   return result
 }
 
@@ -91,4 +90,8 @@ async function getProcessedSpreadsheet (path) {
   return object
 }
 
-module.exports = { getProcessedSpreadsheet }
+// getProcessedSpreadsheet('./files/data.xlsx').then(data => {
+//   console.log(data)
+// })
+
+module.exports = getProcessedSpreadsheet
